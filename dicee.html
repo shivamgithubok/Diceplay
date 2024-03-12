@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img id="player1" alt="dice image">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img id ="player2" alt="dice image">
+      </div>
+
+    </div>
+<script>
+  const image = ["dice1.png", "dice2.png", "dice3.png", "dice4.png", "dice5.png", "dice6.png"];
+  function getrandomimage(){
+  let ran = Math.floor(Math.random()*5 + 1);
+  return image[ran];
+  }
+  const ranimage = document.getElementById("player1");
+  ranimage.src = "images/" + getrandomimage();
+</script>
+
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
